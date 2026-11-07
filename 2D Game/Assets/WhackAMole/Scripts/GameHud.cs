@@ -11,7 +11,7 @@ namespace WhackAMole
         private void OnDisable() { if (game) game.Changed -= Refresh; }
         private void Refresh()
         {
-            if (game && label) label.text = $"TIME {Mathf.CeilToInt(game.Remaining)}    SCORE {game.Score}    MISS {game.Misses}";
+            if (game && label) label.text = $"제한시간 :  {Mathf.CeilToInt(game.Remaining)}    점수 : {game.Score}    미스 : {game.Misses}";
         }
     }
 }

@@ -51,7 +51,7 @@ namespace WhackAMole
                 group.alpha = t;
                 panel.anchoredPosition = Vector2.Lerp(new Vector2(0, -180), Vector2.zero, ease);
                 panel.localScale = Vector3.one * Mathf.Lerp(.7f, 1, ease);
-                resultText.text = $"RESULT\nHITS  {game.Hits}\nMISSES  {game.Misses}\nSCORE  {Mathf.RoundToInt(game.Score * ease)}\nBEST  {game.Best}\nRANK  {(t >= 1 ? game.Rank : "-")}";
+                resultText.text = $"결과\n맞춘 횟수  {game.Hits}\n미스  {game.Misses}\n점수  {Mathf.RoundToInt(game.Score * ease)}\n최고점수 {game.Best}\n랭크  {(t >= 1 ? game.Rank : "-")}";
                 yield return null;
             } while (elapsed < Mathf.Max(.1f, duration));
             group.interactable = true;
